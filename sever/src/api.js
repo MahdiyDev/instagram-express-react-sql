@@ -20,6 +20,7 @@ const corsOptions = {
 app.use((req, res, next) => {
     res.header('Access-Control-Allow_Origin', '*');
     res.header('Access-Control-Allow_Origin', 'Origin, X-Requested-With, Content-Type, Accept');
+    next()
 })
 app.use(cors(corsOptions))
 app.use(require('express-fileupload')())
