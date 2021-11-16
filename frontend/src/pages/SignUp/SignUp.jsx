@@ -30,6 +30,7 @@ function SignUp() {
             })
             .then(res => res.json())
             .then(data => setToken(data.accessToken))
+            .catch(err => console.log(err))
     }
 
     return (
