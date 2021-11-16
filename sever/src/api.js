@@ -12,7 +12,13 @@ const Posts = require('../patterns/post')
 const app = express()
 const router = express.Router()
 
-app.use(cors())
+const corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200,
+    mode: 'no-cors'
+}
+
+app.use(cors(corsOptions))
 app.use(require('express-fileupload')())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))

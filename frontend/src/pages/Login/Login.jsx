@@ -27,6 +27,7 @@ function Login() {
                     })
                     .then(res => res.json())
                     .then(data => setToken(data.accessToken))
+                    .catch(err => console.log(err))
             })()
         } catch (error) {
             console.log(error);
