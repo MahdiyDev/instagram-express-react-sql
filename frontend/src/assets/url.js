@@ -1,3 +1,3 @@
-let url = 'http://localhost:9000/.netlify/functions/api/'
+let url = 'https://instagram-express-react-sql.netlify.app/.netlify/functions/api/'
 
 export default url;

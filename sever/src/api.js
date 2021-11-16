@@ -147,7 +147,7 @@ router.get('/image/:imageName', (req, res) => {
 app.use('/.netlify/functions/api',router)
 
 //olib tashalnadigan  
-app.listen(9000)
+// app.listen(9000)
 
 module.exports= app
 module.exports.handler = serverless(app)
