@@ -2,7 +2,7 @@
   "name": "instagram-express-react-sql",
   "version": "1.0.0",
   "description": "",
-  "main": "./api.js",
+  "main": "./src/api.js",
   "scripts": {
     "start": "./node_modules/.bin/netlify-lambda serve src",
     "build": "./node_modules/.bin/netlify-lambda build src",
