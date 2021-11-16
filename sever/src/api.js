@@ -13,9 +13,7 @@ const app = express()
 const router = express.Router()
 
 const corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200,
-    mode: 'no-cors'
+    origin: '*'
 }
 
 app.use(cors(corsOptions))
