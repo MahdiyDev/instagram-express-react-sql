@@ -12,11 +12,15 @@ const Posts = require('../patterns/post')
 const app = express()
 const router = express.Router()
 
-var corsOptions = {
+const corsOptions = {
     origin: '*',
     optionsSuccessStatus: 200
 }
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow_Origin', '*');
+    res.header('Access-Control-Allow_Origin', 'Origin, X-Requested-With, Content-Type, Accept');
+})
 app.use(cors(corsOptions))
 app.use(require('express-fileupload')())
 app.use(bodyParser.json())
