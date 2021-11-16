@@ -3,6 +3,7 @@ const express = require('express')
 const jwt = require('jsonwebtoken')
 const bodyParser = require('body-parser')
 const serverless = require('serverless-http')
+const cors = require('cors')
 const { v4: UUID } = require('uuid')
 const { User, Post } = require('../database/mangodb_schema')
 const Users = require('../patterns/users')
@@ -11,7 +12,12 @@ const Posts = require('../patterns/post')
 const app = express()
 const router = express.Router()
 
-app.use(require('cors')())
+var corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200
+}
+
+app.use(cors(corsOptions))
 app.use(require('express-fileupload')())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
